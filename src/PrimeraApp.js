@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types'; // command impt
 
-const PrimeraApp = () => {
-    return <h1>Hola Mundo</h1>
+
+// command rafcp
+
+const PrimeraApp = ({saludo}) => {
+
+    // const saludo = 'Hola mundo 1';
+
+    // console.log(`saludo`, saludo)
+
+    return (
+        <Fragment>
+            <h1>{saludo}</h1>
+            <p>probando un parrafo</p>
+        </Fragment>
+    );
+}
+
+PrimeraApp.propTypes = {
+    saludo: PropTypes.string.isRequired,
 }
 
 export default PrimeraApp;
